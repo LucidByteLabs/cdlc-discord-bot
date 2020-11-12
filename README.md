@@ -56,4 +56,4 @@ This help file. Read.
 
 ### Authors
 
-[William Newman] (mailto:wnewman.dev@gmail.com)
+[William Newman](mailto:wnewman.dev@gmail.com)
