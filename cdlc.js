@@ -34,6 +34,7 @@ client.on("ready", () => {
 client.on("message", (receivedMessage) => {
   const incomingM = receivedMessage.content.toLowerCase();
 
+  // This if statement keeps the bot from replying to itself.
   if (receivedMessage.author == client.user) {
     return;
   }
@@ -42,18 +43,28 @@ client.on("message", (receivedMessage) => {
   //   logChannelAndEmojiIDs(`${customEmoji.name} ${customEmoji.id}\n`);
   // });
 
+  // Initial command string.
   if (incomingM.startsWith("!cdlc")) {
-    const command = incomingM.substring(6);
-    if (command.startsWith("help")) {
-        receivedMessage.channel.send("No help data currently.")
-    }
-  }
+    const command = incomingM.substring(6); // Command string truncated
+    let tts = false;
 
-  if (incomingM.startsWith("say hi")) {
-    receivedMessage.channel.send(
-      "Yo yo what up " + receivedMessage.author.toString() + "!",
-      { tts: true }
-    );
+    if (command.includes("tts")) {
+      tts = true; // Bot will read sent message out loud using Discord Text-To-Speech.
+    }
+
+    if (command.startsWith("help")) {
+      receivedMessage.channel.send(
+        "No help data currently.",
+        { tts: tts } // Set to true if command contains "tts"
+      );
+    }
+
+    if (command.startsWith("say hi")) {
+      receivedMessage.channel.send(
+        "Hello, " + receivedMessage.author.toString() + "!",
+        { tts: tts } // Set to true if command contains "tts"
+      );
+    }
   }
 });
 
@@ -79,6 +90,7 @@ function logChannelAndEmojiIDs(identificationData) {
   fs.appendFileSync("./cdlc-ids.txt", identificationData);
 }
 
+// Log message in case of bot disconnect.
 client.on("disconnect", () => {
   fs.appendFileSync("./cdlc-logs.txt", "CDLC Bot has disconnected.");
 });
