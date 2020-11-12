@@ -1,0 +1,28 @@
+{
+  "name": "cdlc-discord-bot",
+  "version": "1.0.0",
+  "description": "Javascript bot for Discord.",
+  "main": "cdlc.js",
+  "dependencies": {
+    "discord.js": "12.3.1"
+  },
+  "devDependencies": {},
+  "type": "module",
+  "scripts": {
+    "start": "node cdlc.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/william-newman/cdlc-bot.git"
+  },
+  "author": "William Newman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/william-newman/cdlc-bot/issues"
+  },
+  "homepage": "https://github.com/william-newman/cdlc-bot#readme",
+  "keywords": [
+    "cdlc"
+  ]
+}
