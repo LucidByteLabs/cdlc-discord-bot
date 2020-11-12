@@ -1,7 +1,7 @@
 {
   "name": "cdlc-discord-bot",
   "version": "1.0.0",
-  "description": "Javascript bot for Discord.",
+  "description": "Discord bot for the Customs Forge DLC Discord Server",
   "main": "cdlc.js",
   "dependencies": {
     "discord.js": "12.3.1"
@@ -14,15 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/william-newman/cdlc-bot.git"
+    "url": "git+https://github.com/CustomsForge/cdlc-discord-bot.git"
   },
+  "keywords": [
+    "cdlc",
+    "guitar",
+    "rocksmith",
+    "ignition"
+  ],
   "author": "William Newman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/william-newman/cdlc-bot/issues"
+    "url": "https://github.com/CustomsForge/cdlc-discord-bot/issues"
   },
-  "homepage": "https://github.com/william-newman/cdlc-bot#readme",
-  "keywords": [
-    "cdlc"
-  ]
+  "homepage": "https://github.com/CustomsForge/cdlc-discord-bot#readme"
 }
