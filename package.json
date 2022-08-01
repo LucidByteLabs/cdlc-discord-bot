@@ -4,7 +4,7 @@
   "description": "Discord bot for the Customs Forge DLC Discord Server",
   "main": "cdlc.js",
   "dependencies": {
-    "discord.js": "12.3.1"
+    "discord.js": "14.0.0"
   },
   "devDependencies": {},
   "type": "module",
